@@ -1,8 +1,5 @@
-<!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
-
 <div class="container h-full mx-auto flex justify-center items-center">
-	<div class="space-y-5">
-		<h1 class="h1">Let's get cracking bones!</h1>
+		<!-- <h1 class="h1">Let's get cracking bones!</h1>
 		<p>Start by exploring:</p>
 		<ul>
 			<li><code class="code">/src/routes/+layout.svelte</code> - barebones layout</li>
@@ -10,6 +7,16 @@
 			<li>
 				<code class="code">/src/routes/+page.svelte</code> - this page, you can replace the contents
 			</li>
-		</ul>
+		</ul> -->
+	<div class="h-[40rem] flex flex-col justify-center">
+		<h1 class="h1">
+			<span class="bg-gradient-to-br from-pink-500 to-violet-500 bg-clip-text text-transparent box-decoration-clone">IM-DIFFUSION</span>
+		</h1>
+		<a href="generate">
+			<button class="btn variant-glass-tertiary w-full">Generate</button>
+		</a>
 	</div>
+</div>
+<div class="absolute left-0 bottom-0 p-2 text-xs text-white/20">
+	<p>The authors of this project are not responsible for any content generated using this interface.</p>
 </div>
