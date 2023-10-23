@@ -10,10 +10,10 @@
 		</ul> -->
 	<div class="h-[40rem] flex flex-col justify-center">
 		<h1 class="h1">
-			<span class="bg-gradient-to-br from-pink-500 to-violet-500 bg-clip-text text-transparent box-decoration-clone">IM-DIFFUSION</span>
+			<span class="bg-gradient-to-br from-primary-300 to-primary-700 bg-clip-text text-transparent box-decoration-clone">IM-DIFFUSION</span>
 		</h1>
 		<a href="generate">
-			<button class="btn variant-glass-tertiary w-full">Generate</button>
+			<button class="btn variant-ghost-tertiary w-full">Generate</button>
 		</a>
 	</div>
 </div>
