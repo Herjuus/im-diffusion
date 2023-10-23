@@ -17,6 +17,6 @@
 		</a>
 	</div>
 </div>
-<div class="absolute left-0 bottom-0 p-2 text-xs text-white/20">
+<div class="absolute left-0 bottom-0 p-2 text-xs opacity-20">
 	<p>The authors of this project are not responsible for any content generated using this interface.</p>
 </div>
