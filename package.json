@@ -30,6 +30,7 @@
   "type": "module",
   "dependencies": {
     "@floating-ui/dom": "1.5.3",
+    "@unpic/svelte": "^0.0.32",
     "axios": "^1.5.1"
   }
 }
