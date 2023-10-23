@@ -3,16 +3,19 @@ import { imageData } from "./stores";
 
 export function fetchImage(prompt: string){
   console.log(prompt)
+  imageData.update((currentImageData) => {
+    const newData = [{"prompt": prompt, "image": ""}, ...currentImageData]
+    return newData
+  })
   axios.get(`http://127.0.0.1:8000/?prompt=${prompt}`)
     .then((response) => {
-      console.log(response.data.image)
-      imageData.update((currentImageData) => {
-        const newData = [...currentImageData, response.data.image];
-        return newData;
+      console.log(prompt)
+      imageData.update((imageData) => {
+        imageData[0] = {"prompt": prompt, "image": response.data.image}; // Update the last item in the array } return array;
+        return imageData
       });
-      return
   })
   .catch((error) => {
     console.log(error)
   })
-} 
+}  

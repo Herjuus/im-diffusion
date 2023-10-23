@@ -22,7 +22,7 @@
   </div>
   <div class="grid lg:grid-cols-2 grid-cols-1 ">
     {#each images as image} 
-      <ImageCard prompt={prompt} image={image} /> 
+      <ImageCard prompt={image.prompt} image={image.image} /> 
     {/each}
   </div>
 </div>
