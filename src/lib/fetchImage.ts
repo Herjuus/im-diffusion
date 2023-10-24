@@ -7,7 +7,7 @@ export function fetchImage(prompt: string){
     const newData = [{"prompt": prompt, "image": ""}, ...currentImageData]
     return newData
   })
-  axios.get(`http://10.58.176.142:8000/?prompt=${prompt}`)
+  axios.get(`http://127.0.0.1:8000/?prompt=${prompt}`)
     .then((response) => {
       console.log(response)
       imageData.update((imageData) => {
