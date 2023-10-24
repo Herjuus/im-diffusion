@@ -1,10 +1,12 @@
 <script lang="ts">
+  import type { SvelteComponent } from "svelte";
   import { getModalStore } from "@skeletonlabs/skeleton";
   import { Image } from "@unpic/svelte";
   import { popup } from "@skeletonlabs/skeleton"
   import type { PopupSettings } from "@skeletonlabs/skeleton";
 
   const modalStore = getModalStore();
+  export let parent: SvelteComponent;
 
   const downloadPopup: PopupSettings = {
     event: "click",
@@ -17,20 +19,23 @@
   <div data-popup="downloadPopup" class="rounded-lg variant-glass-tertiary-800">
     <div class="arrow variant-glass" />
     <div class="flex flex-col">
-      <button class="btn rounded-none variant-glass flex flex-col items-center">
+      <a href="{$modalStore[0].body}" download={`${$modalStore[0].title}.png`} class="btn rounded-none variant-glass flex flex-col items-center">
         <span>UHD</span>
         <span class="text-xs opacity-50">2048 x 2048</span>
-      </button>   
-      <button class="btn rounded-none variant-glass flex flex-col items-center">
+      </a>   
+      <a href="{$modalStore[0].image}" download={`${$modalStore[0].title}.png`} class="btn rounded-none variant-glass flex flex-col items-center">
         <span>FHD</span>
         <span class="text-xs opacity-50">768 x 768</span>
-      </button>   
+      </a>   
     </div>
  </div>
 
   <div class="card p-5 space-y-4">
-    <header class="text-xl line-clamp-2 font-bold">{$modalStore[0].title ?? '(Title Missing)'}</header>
-    <Image class="rounded-md" height={768} width={768} src="{$modalStore[0].image}"/> 
-    <button use:popup={downloadPopup} class="btn variant-ghost">Download</button>
+    <header class="text-xl max-w-[512px] line-clamp-2 font-bold">{$modalStore[0].title ?? '(Title Missing)'}</header>
+    <Image class="rounded-md" height={512} width={512} src="{$modalStore[0].image}"/> 
+    <div class="flex justify-between">
+      <button use:popup={downloadPopup} class="btn variant-ghost">Download</button>
+      <button on:click={parent.onClose} class="btn variant-ghost-error">Close</button>
+    </div>
   </div>
 {/if}

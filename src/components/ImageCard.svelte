@@ -5,7 +5,8 @@
 
   const modalStore = getModalStore();
   export let prompt: string;
-  export let image: any;
+  export let image: string;
+  export let image_large: string;
 
 
   function triggerModal() {
@@ -15,7 +16,8 @@
         type: 'component',
         component: "imageModal",
         title: prompt,
-        image: `data:image/png;base64,${image}`
+        image: `data:image/png;base64,${image}`,
+        body: `data:image/png;base64,${image_large}`
       } 
       modalStore.trigger(imageModal)
     }

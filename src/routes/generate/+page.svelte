@@ -27,7 +27,7 @@
       </div>
       <div class="grid lg:grid-cols-2 grid-cols-1 gap-2 w-full">
         {#each images as image} 
-          <ImageCard prompt={image.prompt} image={image.image} /> 
+          <ImageCard prompt={image.prompt} image_large={image.image_large} image={image.image} /> 
         {/each}
       </div>
     </div>
