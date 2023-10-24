@@ -8,7 +8,7 @@
   storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 </script>
 
-<div class="p-2">
+<div class="p-2 absolute top-0 left-0">
   <LightSwitch />
 </div>
 
