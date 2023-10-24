@@ -21,7 +21,7 @@
     <div class="space-y-2">
       <div>
         <form class="flex gap-2" on:submit={e => {e.preventDefault(); fetchImage(prompt); prompt = '';}}>
-          <input class="input flex-1 variant-ghost-surface" bind:value={prompt} type="text" placeholder="Prompt...">
+          <input class="input focus:border-surface-400 flex-1 variant-ghost-surface" bind:value={prompt} type="text" placeholder="Prompt...">
           <button class="btn variant-ghost-surface">Generate</button>
         </form>
       </div>

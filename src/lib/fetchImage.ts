@@ -9,9 +9,9 @@ export function fetchImage(prompt: string){
   })
   axios.get(`http://10.58.176.142:8000/?prompt=${prompt}`)
     .then((response) => {
-      console.log(prompt)
+      console.log(response)
       imageData.update((imageData) => {
-        imageData[0] = {"prompt": prompt, "image": response.data.image}; // Update the last item in the array } return array;
+        imageData[0] = {"prompt": prompt, "image": response.data.image_small, "image_large": response.data.image_large}; // Update the last item in the array } return array;
         return imageData
       });
   })
