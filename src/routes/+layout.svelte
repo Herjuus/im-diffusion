@@ -18,6 +18,10 @@
 
 <Modal components={modalRegistry} />
 
+<svelte:head>
+  <meta name="title" content="IM-DIFFUSION" >
+</svelte:head>
+
 <div class="p-2 absolute top-0 left-0">
   <LightSwitch />
 </div>
