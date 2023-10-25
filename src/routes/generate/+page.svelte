@@ -1,11 +1,14 @@
 <script lang="ts">
   import ImageCard from "../../components/ImageCard.svelte";
   import { fetchImage } from "../../lib/fetchImage"
-  import { imageData } from "../../lib/stores"
+  import { imageData } from "../../lib/stores/imageData"
 
+  let disabled: boolean = false;
   let prompt: string = '';
   let images: Array<string> = [];
+
   imageData.subscribe((imageData) => {
+    disabled = false
     images = imageData
   });
 
@@ -19,9 +22,9 @@
     </a>
     <div class="space-y-2">
       <div>
-        <form class="flex gap-2" on:submit={e => {e.preventDefault(); fetchImage(prompt); prompt = '';}}>
-          <input class="input focus:border-surface-400 flex-1 variant-ghost-surface" bind:value={prompt} type="text" placeholder="Prompt...">
-          <button class="btn variant-ghost-surface">Generate</button>
+        <form class="flex gap-2" on:submit={e => {e.preventDefault(); fetchImage(prompt); prompt = ''; disabled = true}}>
+          <input disabled={disabled} class="input focus:border-surface-400 flex-1 variant-ghost-surface" bind:value={prompt} type="text" placeholder="Prompt...">
+          <button disabled={disabled} class="btn variant-ghost-surface">Generate</button>
         </form>
       </div>
       <div class="grid lg:grid-cols-2 grid-cols-1 gap-2 w-full">

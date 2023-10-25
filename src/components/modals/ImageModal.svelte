@@ -18,7 +18,7 @@
 {#if $modalStore[0]}
   <div data-popup="downloadPopup" class="rounded-lg variant-glass-tertiary-800">
     <div class="arrow variant-glass" />
-    <div class="flex flex-col">
+    <div class="btn-group-vertical">
       <a href="{$modalStore[0].body}" download={`${$modalStore[0].title}.png`} class="btn rounded-none variant-glass flex flex-col items-center">
         <span>UHD</span>
         <span class="text-xs opacity-50">2048 x 2048</span>
