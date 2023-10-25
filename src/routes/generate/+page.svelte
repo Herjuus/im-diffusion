@@ -7,7 +7,6 @@
   let images: Array<string> = [];
   imageData.subscribe((imageData) => {
     images = imageData
-    console.log(images[0])
   });
 
 </script>
