@@ -24,15 +24,15 @@
         <span class="text-xs opacity-50">2048 x 2048</span>
       </a>   
       <a href="{$modalStore[0].image}" download={`${$modalStore[0].title}.png`} class="btn rounded-none variant-glass flex flex-col items-center">
-        <span>FHD</span>
-        <span class="text-xs opacity-50">768 x 768</span>
+        <span>SD</span>
+        <span class="text-xs opacity-50">512 x 512</span>
       </a>   
     </div>
  </div>
 
   <div class="card p-5 space-y-4">
     <header class="text-xl max-w-[512px] line-clamp-2 font-bold">{$modalStore[0].title ?? '(Title Missing)'}</header>
-    <Image class="rounded-md" height={512} width={512} src="{$modalStore[0].image}"/> 
+    <Image class="rounded-md" height={420} width={420} src="{$modalStore[0].image}"/> 
     <div class="flex justify-between">
       <button use:popup={downloadPopup} class="btn variant-ghost">Download</button>
       <button on:click={parent.onClose} class="btn variant-ghost-error">Close</button>
