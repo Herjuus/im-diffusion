@@ -31,7 +31,7 @@
  </div>
 
   <div class="card p-5 space-y-4">
-    <header class="text-xl max-w-[512px] line-clamp-2 font-bold">{$modalStore[0].title ?? '(Title Missing)'}</header>
+    <header class="text-xl line-clamp-2 font-bold">{$modalStore[0].title ?? '(Title Missing)'}</header>
     <Image class="rounded-md" height={420} width={420} src="{$modalStore[0].image}"/> 
     <div class="flex justify-between">
       <button use:popup={downloadPopup} class="btn variant-ghost">Download</button>
