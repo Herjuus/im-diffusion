@@ -30,7 +30,7 @@
     </div>
  </div>
 
-  <div class="card p-5 space-y-4">
+  <div class="card p-5 space-y-4 w-[430px]">
     <header class="text-xl line-clamp-2 font-bold">{$modalStore[0].title ?? '(Title Missing)'}</header>
     <Image class="rounded-md" height={420} width={420} src="{$modalStore[0].image}"/> 
     <div class="flex justify-between">

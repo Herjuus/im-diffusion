@@ -8,7 +8,7 @@ export function fetchImage(prompt: string){
     return newData
   })
   isDisabled.set(true);
-  axios.get(`http://10.58.176.142:8000/?prompt=${prompt}`)
+  axios.get(`http://172.31.4.59:8000/?prompt=${prompt}`)
     .then((response) => {
       imageData.update((imageData) => {
         imageData[0] = {"prompt": prompt, "image": response.data.image_small, "image_large": response.data.image_large}; // Update the last item in the array } return array;
