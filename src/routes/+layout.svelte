@@ -22,8 +22,4 @@
   <title>IM-DIFFUSION</title>
 </svelte:head>
 
-<div class="p-2 absolute top-0 left-0">
-  <LightSwitch />
-</div>
-
 <slot />
